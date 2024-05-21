@@ -13,7 +13,7 @@
               <a class="nav-link active" aria-current="page" href="#">Data Desa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Data Jalan</a>
+              <a class="nav-link" href="/dataruasjalan">Data Jalan</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/ruasjalan">Tambah Jalan</a>
