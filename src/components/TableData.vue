@@ -1,8 +1,32 @@
 <template>
-    <div class="mt-5 mx-5 shadow-lg p-5 border border-2 border-dark">
+  <div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">GIS || Road Tracker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Data Desa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Data Jalan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/ruasjalan">Tambah Jalan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="mt-5 mx-5 p-5 shadow-lg glass-effect">
       <div class="row">
         <!-- Sidebar untuk pencarian -->
-        <div class="col-md-4 p-4 shadow-lg mx-4 border border-2 border-dark">
+        <div class="col-md-4 p-4 shadow-lg mx-4 glass-effect">
           <h3 class="mb-4">Search</h3>
           <div class="mb-3">
             <label for="province" class="form-label">Pilih Provinsi:</label>
@@ -33,7 +57,7 @@
         </div>
   
         <!-- Tabel data di sebelah kanan -->
-        <div class="col-md-6 p-4 shadow-lg mx-4 border border-2 border-dark">
+        <div class="col-md-6 p-4 shadow-lg mx-4 glass-effect">
           <div v-if="desas.length">
             <table class="table table-bordered">
               <thead>
@@ -51,6 +75,7 @@
         </div>
       </div>
     </div>
+  </div>
   </template>
   
   <script>
@@ -83,7 +108,6 @@
           this.provinces = response.data.provinsi;
           this.kabupatens = response.data.kabupaten;
           this.kecamatans = response.data.kecamatan;
-          this.desas = response.data.desa;
         } catch (error) {
           console.error(error);
         }
