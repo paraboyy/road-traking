@@ -62,6 +62,18 @@
                                 </option>                   
                             </select>
                         </div>
+                        <div class="form-group">
+                        <label for="Jenisjalan">Jenis Jalan:</label>
+                            <select id="Jenisjalan" class="form-select" v-model="selectedJenisJalan" @change="onJenisJalanChange">
+                                <option v-for="mjenisjalanS in mjenisjalan" :key="mjenisjalanS.id" :value="mjenisjalanS.id">
+                                    {{ mjenisjalanS.jenisjalan }}
+                                </option>                   
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Keterangan">Keterangan:</label>
+                            <input type="text" class="form-control" v-model="jalanForm.keterangan" required>
+                        </div>
                         <button type="submit" class="btn btn-primary mt-4">Add Road</button>
                     </form>
                     </div>
@@ -94,9 +106,11 @@ export default {
             desa: [],
             meksisting: [],
             mkondisi: [],
+            mjenisjalan: [],
             selectedDesa: null,
             selectedEksisting: null,
             selectedKondisi: null,
+            selectedJenisJalan: null,
         }
     },
 
@@ -116,6 +130,7 @@ export default {
       this.fetchDesa();
       this.fetchEksisting();
       this.fetchKondisi();
+      this.fetchJenisJalan();
     },
 
     methods: {
@@ -158,6 +173,19 @@ export default {
           console.error(error);
         }
       },
+      async fetchJenisJalan() {
+        try {
+          const token = localStorage.getItem('token');
+          const response = await axios.get('https://gisapis.manpits.xyz/api/mjenisjalan', {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
+          this.mjenisjalan = response.data.eksisting;
+        } catch (error) {
+          console.error(error);
+        }
+      },
       onDesaChange() {
         this.fetchDesa();
       },
@@ -166,6 +194,9 @@ export default {
       },
       onKondisiChange() {
         this.fetchKondisi();
+      },
+      onJenisJalanChange() {
+        this.fetchJenisJalan();
       }
     }
 }
