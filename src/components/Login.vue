@@ -1,19 +1,19 @@
 <template>
   <div class="d-flex justify-content-center align-items-center min-vh-100 bg-light backgroundimg">
-    <div class="bg-white p-4 rounded shadow-lg w-25">
-      <h2 class="text-center mb-4">Login</h2>
+    <div class="glass-effect p-4 rounded shadow-lg w-25">
+      <h2 class="text-center mb-4 text-white">Login</h2>
       <form @submit.prevent="login">
         <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
+          <label for="email" class="form-label text-white">Email</label>
           <input v-model="email" type="email" id="email" class="form-control" required />
         </div>
         <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
+          <label for="password" class="form-label text-white">Password</label>
           <input v-model="password" type="password" id="password" class="form-control" required />
         </div>
-        <button type="submit" class="btn btn-primary w-100">Login</button>
+        <button type="submit" class="btn btn-info w-100 text-white">Login</button>
         <div class="text-center">
-          <p>Don't have an account? <router-link to="/register" class="btn btn-link">Register</router-link></p>
+          <p class="text-white pt-2">Don't have an account? <router-link to="/register" class="btn-link text-white">Register</router-link></p>
         </div>
       </form>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -19,6 +19,7 @@
               <a class="nav-link" href="/ruasjalan">Tambah Jalan</a>
             </li>
           </ul>
+          <a href="/login"><button class="btn btn-danger">Logout</button></a>
         </div>
       </div>
     </nav>
@@ -171,5 +172,13 @@
   .container {
     max-width: 800px;
   }
+
+  .backgroundimg{
+        background-image: url('https://www.denpasarkota.go.id/public/uploads/Background_221903010352_pemerintah-kota-denpasar.jpg');
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center; 
+        background-attachment: fixed;
+    }
   </style>
   

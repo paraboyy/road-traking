@@ -19,14 +19,12 @@
               <a class="nav-link" href="/ruasjalan">Tambah Jalan</a>
             </li>
           </ul>
+          <a href="/login"><button class="btn btn-danger">Logout</button></a>
         </div>
       </div>
     </nav>
 
     <div class="mt-5 mx-5 p-5 shadow-lg glass-effect">
-      <div class="row">
-        <!-- Tabel data di sebelah kanan -->
-        <div class="col p-4 shadow-lg mx-4 glass-effect">
           <div v-if="dataruasjalan.length">
             <table class="table table-bordered">
               <thead>
@@ -56,8 +54,6 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
       </div>
     </div>
   </div>

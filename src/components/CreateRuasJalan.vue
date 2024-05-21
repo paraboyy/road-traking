@@ -19,13 +19,14 @@
               <a class="nav-link" href="/ruasjalan">Tambah Jalan</a>
             </li>
           </ul>
+          <a href="/login"><button class="btn btn-danger">Logout</button></a>
         </div>
       </div>
     </nav>
 
-    <div class="mt-5 mx-5 p-5 shadow-lg glass-effect">
+    <div class="mt-5 mx-5 p-5 shadow-lg glass-effect mb-5">
       <div class="d-flex">
-        <div class="card shadow" style="width: 100%;">
+        <div class="card shadow mx-2" style="width: 100%;">
           <div class="card-body">
             <div id="map" ref="map" style="height: 100%;"></div>
           </div>
