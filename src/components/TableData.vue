@@ -60,7 +60,7 @@
         <!-- Tabel data di sebelah kanan -->
         <div class="col-md-6 p-4 shadow-lg mx-4 glass-effect">
           <div v-if="desas.length">
-            <table class="table table-bordered">
+            <table class="table table-warning table-hover table-striped-columns">
               <thead>
                 <tr>
                   <th scope="col">Nama Desa</th>

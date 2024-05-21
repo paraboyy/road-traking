@@ -26,7 +26,7 @@
 
     <div class="mt-5 mx-5 p-5 shadow-lg glass-effect">
           <div v-if="dataruasjalan.length">
-            <table class="table table-bordered">
+            <table class="table table-warning table-hover table-striped-columns">
               <thead>
                 <tr>
                   <th scope="col">Nama Desa</th>
